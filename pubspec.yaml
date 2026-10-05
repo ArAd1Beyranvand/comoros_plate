@@ -1,0 +1,20 @@
+name: comoros_plate
+description: "Comoros's licence plates for the plate_core library — the black single-row plate and the square two-row plate with the crescent and four stars, their theme and an advisory validator."
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plate_core: ^0.11.5
+  plate_alphabet: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
