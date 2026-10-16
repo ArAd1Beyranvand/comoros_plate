@@ -120,14 +120,13 @@ abstract final class _Square {
     starRadius: 5.7,
   );
 
-  /// `COMORES` centred on x 46.85, y 183.35 (the ink's middle). 
+  /// `COMORES` centred on x 46.85, y 183.35 (the ink's middle).
   static const PlateBox caption = PlateBox(11.85, 173.35, 70, 20);
   static const double captionGlyph = 19.5;
 }
 
 abstract final class ComorosPlates {
-  /// `1284 A 73`: four digits, a letter and two digits on one row, 520×110.
-  /// Pair with `ComorosThemes.standard`.
+  /// `1284 A 73` on one row, 520×110. Pair with `ComorosThemes.standard`.
   ///
   /// Slots: the four digits, the letter, the two digits.
   static final PlateSpec standard = PlateSpec(
