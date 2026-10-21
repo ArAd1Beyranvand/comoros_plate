@@ -22,10 +22,9 @@ class ComorosCrescentClipper extends CustomClipper<Path> {
   final Offset innerCentre;
   final double innerRadius;
 
-  /// Each star's circumcentre.
+  /// Each star's circumcentre; [starRadius] is centre to point.
   final List<Offset> stars;
 
-  /// A star's circumradius, centre to point.
   final double starRadius;
 
   @override

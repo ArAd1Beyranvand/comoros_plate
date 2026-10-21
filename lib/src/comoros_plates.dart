@@ -127,8 +127,6 @@ abstract final class _Square {
 
 abstract final class ComorosPlates {
   /// `1284 A 73` on one row, 520×110. Pair with `ComorosThemes.standard`.
-  ///
-  /// Slots: the four digits, the letter, the two digits.
   static final PlateSpec standard = PlateSpec(
     id: 'km.standard',
     country: ComorosCountry.comoros,
@@ -174,8 +172,6 @@ abstract final class ComorosPlates {
 
   /// `079 U` over `73`, 326×200, with the crescent, four stars and `COMORES`
   /// at the lower left. Pair with `ComorosThemes.square`.
-  ///
-  /// Slots: row one's three digits and letter, then row two's two digits.
   static final PlateSpec square = PlateSpec(
     id: 'km.square',
     country: ComorosCountry.comoros,
