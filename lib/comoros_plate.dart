@@ -13,3 +13,4 @@ export 'src/comoros_country.dart';
 export 'src/comoros_plates.dart';
 export 'src/comoros_themes.dart';
 export 'src/comoros_validators.dart';
+export 'src/mayotte/mayotte_plate.dart';

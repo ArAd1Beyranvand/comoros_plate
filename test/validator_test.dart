@@ -4,9 +4,7 @@ import 'package:plate_core/plate_core.dart';
 
 void main() {
   PlateValidation judge(PlateSpec spec, String value) =>
-      const ComorosPlateValidator().validate(
-        PlateEntry(spec: spec, values: value.split('')),
-      );
+      const ComorosPlateValidator().validate(PlateEntry(spec: spec, values: value.split('')));
 
   test('accepts the single-row plate', () {
     expect(judge(ComorosPlates.standard, '1284A73').isValid, isTrue);

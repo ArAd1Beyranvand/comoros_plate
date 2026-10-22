@@ -111,12 +111,7 @@ abstract final class _Square {
     outerRadius: 39.8,
     innerCentre: Offset(56.4, 40.7),
     innerRadius: 41.9,
-    stars: <Offset>[
-      Offset(37.5, 13.9),
-      Offset(37.5, 31.6),
-      Offset(37.5, 49.4),
-      Offset(37.5, 67.1),
-    ],
+    stars: <Offset>[Offset(37.5, 13.9), Offset(37.5, 31.6), Offset(37.5, 49.4), Offset(37.5, 67.1)],
     starRadius: 5.7,
   );
 
@@ -195,11 +190,7 @@ abstract final class ComorosPlates {
       const PlatePart(PlateSection.plain),
     ]),
     labels: const <PlateLabel>[
-      PlateLabel(
-        text: 'COMORES',
-        box: _Square.caption,
-        glyphHeight: _Square.captionGlyph,
-      ),
+      PlateLabel(text: 'COMORES', box: _Square.caption, glyphHeight: _Square.captionGlyph),
     ],
     slots: <PlateSlot>[
       ...plateRegister(
