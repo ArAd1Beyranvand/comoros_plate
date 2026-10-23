@@ -1,7 +1,7 @@
 name: comoros_plate
 description: "Comoros's licence plates for the plate_core library — the black single-row plate and the square two-row plate with the crescent and four stars, their theme and an advisory validator."
 version: 0.1.0
-publish_to: none
+repository: https://github.com/ArAd1Beyranvand/comoros_plate
 resolution: workspace
 
 environment:
