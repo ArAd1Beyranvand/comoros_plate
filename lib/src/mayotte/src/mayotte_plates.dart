@@ -84,7 +84,12 @@ abstract final class MayottePlates {
 
   static PlateLabel _dash(double cx) => PlateLabel(
     text: '-',
-    box: PlateBox(cx - 15, _Layout.dashY - _Layout.dashGlyph / 2, 30, _Layout.dashGlyph),
+    box: PlateBox(
+      cx - 15,
+      _Layout.dashY - _Layout.dashGlyph / 2,
+      30,
+      _Layout.dashGlyph,
+    ),
     glyphHeight: _Layout.dashGlyph,
   );
 
@@ -111,7 +116,12 @@ abstract final class MayottePlates {
       decals: const <PlateDecal>[
         PlateDecal(
           drawing: _logo,
-          box: PlateBox(_Layout.logoLeft, _Layout.logoTop, _Layout.logoWidth, _Layout.logoHeight),
+          box: PlateBox(
+            _Layout.logoLeft,
+            _Layout.logoTop,
+            _Layout.logoWidth,
+            _Layout.logoHeight,
+          ),
         ),
       ],
       slots: <PlateSlot>[

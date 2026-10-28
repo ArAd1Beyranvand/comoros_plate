@@ -9,9 +9,11 @@ class MayotteValidator extends GatedPlateValidator {
   @override
   String get gateGroup => 'number';
 
-  static const String reasonPrefix = 'The prefix is two letters (no I, O, U or SS).';
+  static const String reasonPrefix =
+      'The prefix is two letters (no I, O, U or SS).';
   static const String reasonNumber = 'The number is three digits, 001–999.';
-  static const String reasonSuffix = 'The suffix is two letters (no I, O, U or SS).';
+  static const String reasonSuffix =
+      'The suffix is two letters (no I, O, U or SS).';
   static const String reasonDepartment = 'The département code is 976.';
 
   static const String department = '976';

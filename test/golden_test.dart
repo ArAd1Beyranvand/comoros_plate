@@ -33,7 +33,10 @@ void main() {
 
   for (final (name, spec, theme, values) in cases) {
     testWidgets(name, (tester) async {
-      final controller = PlateController.fromValues(spec, values.split('').toList());
+      final controller = PlateController.fromValues(
+        spec,
+        values.split('').toList(),
+      );
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -52,7 +55,10 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      await expectLater(find.byType(PlateView), matchesGoldenFile('goldens/$name.png'));
+      await expectLater(
+        find.byType(PlateView),
+        matchesGoldenFile('goldens/$name.png'),
+      );
       await tester.pumpWidget(const SizedBox.shrink());
       controller.dispose();
     });

@@ -31,8 +31,10 @@ class ComorosCrescentClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     final Path path = Path.combine(
       PathOperation.difference,
-      Path()..addOval(Rect.fromCircle(center: outerCentre, radius: outerRadius)),
-      Path()..addOval(Rect.fromCircle(center: innerCentre, radius: innerRadius)),
+      Path()
+        ..addOval(Rect.fromCircle(center: outerCentre, radius: outerRadius)),
+      Path()
+        ..addOval(Rect.fromCircle(center: innerCentre, radius: innerRadius)),
     );
     for (final Offset c in stars) {
       path.addPath(_star(c, starRadius), Offset.zero);
@@ -43,7 +45,8 @@ class ComorosCrescentClipper extends CustomClipper<Path> {
   /// A regular pentagram: points alternate between [r] and the inner radius
   /// that keeps its edges straight, `r * sin(18°) / sin(54°)`.
   static Path _star(Offset c, double r) {
-    final double inner = r * math.sin(math.pi / 10) / math.sin(3 * math.pi / 10);
+    final double inner =
+        r * math.sin(math.pi / 10) / math.sin(3 * math.pi / 10);
     final Path p = Path();
     for (var i = 0; i < 10; i++) {
       final double radius = i.isEven ? r : inner;
