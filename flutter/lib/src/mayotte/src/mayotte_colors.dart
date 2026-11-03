@@ -9,7 +9,6 @@ abstract final class MayotteColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
   static const Color euroBlue = Color(0xFF003399);
-  static const Color inactive = Color(0xFFB0B0B0);
   static const Color logoBlue = Color(0xFF2090C8);
   static const Color logoRed = Color(0xFFB82020);
   static const Color logoGrey = Color(0xFF606068);

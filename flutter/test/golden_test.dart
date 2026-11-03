@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:comoros_plate/comoros_plate.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plate_core/plate_core.dart';
+import 'package:plate_core/testing.dart';
 
 /// One golden per design, rendered with a real face so the ink can be measured
 /// against the article's artwork and photograph.
@@ -37,30 +37,15 @@ void main() {
         spec,
         values.split('').toList(),
       );
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Scaffold(
-            body: Center(
-              child: SizedBox(
-                width: 520,
-                height: 520 * spec.canvasHeight / spec.canvasWidth,
-                child: PlateView(
-                  controller: controller,
-                  theme: theme,
-                  country: ComorosCountry.comoros,
-                ),
-              ),
-            ),
-          ),
-        ),
+      await pumpPlateGolden(
+        tester,
+        controller,
+        'goldens/$name.png',
+        theme: theme,
+        scoped: false,
+        country: ComorosCountry.comoros,
+        stage: Size(520, 520 * spec.canvasHeight / spec.canvasWidth),
       );
-      await tester.pumpAndSettle();
-      await expectLater(
-        find.byType(PlateView),
-        matchesGoldenFile('goldens/$name.png'),
-      );
-      await tester.pumpWidget(const SizedBox.shrink());
-      controller.dispose();
     });
   }
 }

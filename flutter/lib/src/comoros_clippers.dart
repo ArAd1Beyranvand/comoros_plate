@@ -3,9 +3,6 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/widgets.dart';
 
-// TODO(py): [H1][D3] CustomClipper: export as a path in plate coordinates; QPainterPath.
-// TODO(ts): [H1][D3] CustomClipper: export as an SVG path string in plate coordinates.
-// TODO(kt): [H1][D3] CustomClipper: export as path data; Compose Path via PathParser.
 /// A crescent and a column of five-pointed stars, as one region of a
 /// background leaf: the crescent is the [outerRadius] disc less the
 /// [innerRadius] disc, and each star points up. Every coordinate is in the

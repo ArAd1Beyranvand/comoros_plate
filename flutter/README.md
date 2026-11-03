@@ -6,13 +6,24 @@ GO VEGAN 🌱
 
 From the mighty people of Iran to the gracious people of Comoros to view examples:
 
-https://platexample.ir/#/discover/comoros
+https://platexample.ir/#/discover/comoros:flutter
 
 # comoros_plate
 
-Comoros's licence plates for the `plate_core` library. Two designs, both silver on black: the single-row plate (`1284 A 73`, 520×110 mm) and the square two-row plate (`079 U` over `73`) with the crescent and four stars and `COMORES`. The island, government and diplomatic series are not implemented: no artwork for them was found.
+Comoros's licence plates for plate_core — the black single-row plate and the square two-row plate with the crescent and four stars, their theme and an advisory validator.
 
-## Install
+## Languages
+
+| Language | Folder | Example |
+| --- | --- | --- |
+| Flutter / Dart | [`flutter/`](https://github.com/ArAd1Beyranvand/comoros_plate/tree/main/flutter) | [platexample](https://platexample.ir/#/discover/comoros:flutter) |
+| Kotlin | [`kotlin/`](https://github.com/ArAd1Beyranvand/comoros_plate/tree/main/kotlin) | [platexample](https://platexample.ir/#/discover/comoros:kotlin) |
+| Python | [`python/`](https://github.com/ArAd1Beyranvand/comoros_plate/tree/main/python) | [platexample](https://platexample.ir/#/discover/comoros:python) |
+| TypeScript | [`typescript/`](https://github.com/ArAd1Beyranvand/comoros_plate/tree/main/typescript) | [platexample](https://platexample.ir/#/discover/comoros:typescript) |
+
+## Quick start
+
+### Install
 
 ```yaml
 dependencies:
@@ -20,7 +31,7 @@ dependencies:
   comoros_plate: ^0.1.0
 ```
 
-## Use
+### Use
 
 ```dart
 import 'package:plate_core/plate_core.dart';
@@ -35,16 +46,26 @@ PlateCanvas(
 );
 ```
 
-## Contains
+## Specs
 
-- `ComorosCountry` — country panel: `comoros`.
-- `MayotteCountry` — country panel: `mayotte`.
-- `ComorosPlates` — 2 plate specs: `standard`, `square`.
-- `MayottePlates` — 1 plate spec: `private`.
-- `ComorosThemes` — 2 themes: `standard`, `square`.
-- `MayotteThemes` — 1 theme: `private`.
-- `ComorosPlateValidator` — advisory validator; flags the frame, never blocks a keystroke.
-- `MayotteValidator` — advisory validator; flags the frame, never blocks a keystroke.
+Each spec is one plate layout.
+
+- `ComorosPlates.standard` — id `km.standard`
+- `ComorosPlates.square` — id `km.square`
+
+## Themes
+
+- `ComorosThemes.standard`
+- `ComorosThemes.square`
+
+## Change it
+
+`PlateCanvas` takes `spec:` (an entry of `ComorosPlates`) and `theme:` (an entry of `ComorosThemes`). Set `validator:` to `ComorosPlateValidator()` and `autoValidate: true` to show validation hints.
+
+## Also included
+
+- `ComorosCountry` — the country panel.
+- `ComorosPlateValidator` — the plate validator.
 
 ## Plates
 
@@ -57,3 +78,6 @@ over a white box.
 
 Painted by [`plate_core`](https://pub.dev/packages/plate_core); alphabets shared through [`plate_alphabet`](https://pub.dev/packages/plate_alphabet); optional character picker in [`plate_keypad`](https://pub.dev/packages/plate_keypad).
 
+## License
+
+See [LICENSE](https://github.com/ArAd1Beyranvand/comoros_plate/blob/main/LICENSE).

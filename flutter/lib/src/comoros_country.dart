@@ -8,7 +8,6 @@ import 'comoros_colors.dart';
 abstract final class ComorosCountry {
   static const PlateCountry comoros = PlateCountry(
     code: 'km',
-    captionLines: <String>[],
     panelColor: ComorosColors.field,
     panelTextColor: ComorosColors.ink,
   );

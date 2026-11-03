@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/widgets.dart' show Color, EdgeInsets;
 import 'package:plate_alphabet/plate_alphabet.dart';
 import 'package:plate_core/plate_core.dart';
@@ -29,11 +27,9 @@ import 'mayotte_country.dart';
 /// Not drawn: the 1976–1989 `AMTE` plates and the 1990 black, white and yellow
 /// `000 A 976` series, which are history, not current plates.
 abstract final class _Layout {
-  static const double width = 520, height = 110;
-  static const double leftEnd = 52, rightStart = 470;
+  static const double width = 520, height = 110, leftEnd = 52, rightStart = 470;
 
-  static const double bandCx = 26.75;
-  static const double panelWidth = 46, panelHeight = 70.4;
+  static const double bandCx = 26.75, panelWidth = 46, panelHeight = 70.4;
   static const double fTop = 65.5, fHeight = 22, fGlyph = 39, fWidth = 20;
 
   static const double logoLeft = 475.8, logoTop = 10;
@@ -74,11 +70,13 @@ abstract final class MayottePlates {
     double height,
     int length, {
     Color? color,
-  }) => PlateSlot(
-    alphabet: alphabet,
-    box: PlateBox(cx - length * pitch / 2, top, length * pitch, height),
-    length: length,
-    spacing: max(0, pitch - 0.6 * 0.72 * height),
+  }) => plateRun(
+    alphabet,
+    length,
+    centre: cx,
+    top: top,
+    pitch: pitch,
+    height: height,
     color: color,
   );
 
@@ -164,12 +162,12 @@ abstract final class MayottePlates {
         _dash(_Layout.dash1),
         _dash(_Layout.dash2),
       ],
-      textGroups: const <PlateTextGroup>[
-        PlateTextGroup(<int>[0], key: 'prefix'),
-        PlateTextGroup(<int>[1], key: 'number'),
-        PlateTextGroup(<int>[2], key: 'suffix'),
-        PlateTextGroup(<int>[3], key: 'department'),
-      ],
+      textGroups: PlateTextGroup.perSlot(<String>[
+        'prefix',
+        'number',
+        'suffix',
+        'department',
+      ]),
     );
   }
 }

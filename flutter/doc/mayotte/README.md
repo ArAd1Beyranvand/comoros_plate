@@ -6,7 +6,7 @@ GO VEGAN 🌱
 
 From the mighty people of Iran to the resilient people of Mayotte to view examples:
 
-https://platexample.ir/#/discover/mayotte
+https://platexample.ir/#/discover/mayotte:flutter
 
 # mayotte_plate
 

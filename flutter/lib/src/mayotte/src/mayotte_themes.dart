@@ -8,7 +8,6 @@ abstract final class MayotteThemes {
   static final PlateTheme private = PlateTheme.monochrome(
     field: MayotteColors.white,
     ink: MayotteColors.black,
-    inactive: MayotteColors.inactive,
     borderWidthRatio: 0.0227,
     plateRadiusRatio: 0.055,
   );

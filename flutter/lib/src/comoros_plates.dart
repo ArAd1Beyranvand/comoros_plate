@@ -31,19 +31,15 @@ import 'comoros_country.dart';
 /// as wide as the glyph instead; they overlap their neighbours by 3 and 9, and
 /// the text is centred, so the ink does not move.
 abstract final class _Standard {
-  static const double width = 520;
-  static const double height = 110;
+  static const double width = 520, height = 110;
 
-  static const double numberPitch = 41.85;
-  static const double numberFirstCentre = 82.45;
+  static const double numberPitch = 41.85, numberFirstCentre = 82.45;
   static const int numberDigits = 4;
   static const double digitCell = 45;
 
-  static const double letterCentre = 294.7;
-  static const double letterCell = 56;
+  static const double letterCentre = 294.7, letterCell = 56;
 
-  static const double codePitch = 36.2;
-  static const double codeFirstCentre = 384.3;
+  static const double codePitch = 36.2, codeFirstCentre = 384.3;
   static const int codeDigits = 2;
 }
 
@@ -81,29 +77,22 @@ abstract final class _Standard {
 ///
 /// **Not drawn.** The two screw holes and the faint inner rim.
 abstract final class _Square {
-  static const double width = 326;
-  static const double height = 200;
+  static const double width = 326, height = 200;
 
-  static const double rowHeight = 108;
-  static const double rowOneTop = 1.8;
-  static const double rowTwoTop = 91.65;
+  static const double rowHeight = 108, rowOneTop = 1.8, rowTwoTop = 91.65;
 
-  static const double numberPitch = 51.85;
-  static const double numberFirstCentre = 72.0;
+  static const double numberPitch = 51.85, numberFirstCentre = 72.0;
   static const int numberDigits = 3;
 
   static const double letterCentre = 252.9;
 
-  static const double codePitch = 53.8;
-  static const double codeFirstCentre = 145.3;
+  static const double codePitch = 53.8, codeFirstCentre = 145.3;
   static const int codeDigits = 2;
 
   /// The leaf the crescent and stars are painted in: the crescent's bounding
   /// box (x 21.1..63.9, y 98.9..178.4), a little loose. Everything the clipper
   /// holds is relative to its top-left corner.
-  static const double emblemLeft = 21;
-  static const double emblemTop = 98.5;
-  static const double emblemWidth = 43;
+  static const double emblemLeft = 21, emblemTop = 98.5, emblemWidth = 43;
   static const double emblemHeight = 80;
 
   static const ComorosCrescentClipper emblem = ComorosCrescentClipper(
@@ -132,8 +121,6 @@ abstract final class ComorosPlates {
     country: ComorosCountry.comoros,
     canvasWidth: _Standard.width,
     canvasHeight: _Standard.height,
-    panel: const PlatePanel(box: PlateBox(0, 0, 0, 0)),
-    noPanel: true,
     slots: <PlateSlot>[
       ...plateRegister(
         alphabet: ComorosAlphabets.digits,
@@ -177,8 +164,6 @@ abstract final class ComorosPlates {
     country: ComorosCountry.comoros,
     canvasWidth: _Square.width,
     canvasHeight: _Square.height,
-    panel: const PlatePanel(box: PlateBox(0, 0, 0, 0)),
-    noPanel: true,
     background: PlateSection.columns(<PlatePart>[
       const PlatePart(PlateSection.plain, end: _Square.emblemLeft),
       PlatePart(

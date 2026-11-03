@@ -6,9 +6,6 @@
 /// diplomatic series are not implemented: no artwork for them was found.
 library;
 
-// TODO(py): [D5] one module `plates.countries.comoros`; assets via importlib.resources.
-// TODO(ts): [D5] one subpath export `./countries/comoros`; tree-shakable.
-// TODO(kt): [D5] package `countries.comoros` in the countries module.
 export 'src/comoros_alphabets.dart';
 export 'src/comoros_clippers.dart';
 export 'src/comoros_colors.dart';

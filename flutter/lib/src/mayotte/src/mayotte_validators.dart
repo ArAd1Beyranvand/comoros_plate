@@ -1,16 +1,10 @@
 import 'package:plate_core/plate_core.dart';
 
-// TODO(py): [D4-code] hand-port; reason strings are the contract, keep them byte-identical.
-// TODO(ts): [D4-code] hand-port; reason strings are the contract, keep them byte-identical.
-// TODO(kt): [D4-code] hand-port; reason strings are the contract, keep them byte-identical.
 /// Judges a Mayotte SIV plate: two letters, three digits (001–999) and
 /// two letters, with the département `976` on the right. The letters leave
 /// out I, O and U, and the SS pair. Reports, never bars a keystroke.
 class MayotteValidator extends GatedPlateValidator {
-  const MayotteValidator();
-
-  @override
-  String get gateGroup => 'number';
+  const MayotteValidator() : super('number');
 
   static const String reasonPrefix =
       'The prefix is two letters (no I, O, U or SS).';
@@ -21,9 +15,6 @@ class MayotteValidator extends GatedPlateValidator {
 
   static const String department = '976';
 
-  // TODO(py): [H9] Python re: \d/\w match Unicode; keep explicit [0-9]/[A-Z] classes (or re.ASCII).
-  // TODO(ts): [H9] same flavour as Dart; port as is, cover accept/reject in the vectors (D9).
-  // TODO(kt): [H9] Regex engine differs per target (JVM/JS/Native): keep to portable syntax.
   static final RegExp _letters = RegExp(r'^[A-HJ-NP-TV-Z]{2}$');
 
   @override
