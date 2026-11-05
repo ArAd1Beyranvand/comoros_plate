@@ -1,4 +1,4 @@
-import { PlateCheck, RuledPlateValidator } from '../../core/validators/plate_validator';
+import { PlateCheck, RuledPlateValidator } from 'plate_core/core/validators/plate_validator';
 
 /** Judges a `ComorosPlates` value: three or four digits, a letter and two
  * digits (`1284 A 73`, `079 U 73`). Reports, never bars a keystroke. The shape

@@ -1,4 +1,4 @@
-import { GatedPlateValidator, type PlateEntry, type PlateValidation, invalid, isDigitsOfLength, valid } from '../../core/validators/plate_validator';
+import { GatedPlateValidator, type PlateEntry, type PlateValidation, invalid, isDigitsOfLength, valid } from 'plate_core/core/validators/plate_validator';
 
 /**
  * Judges a Mayotte SIV plate: two letters, three digits (001–999) and
